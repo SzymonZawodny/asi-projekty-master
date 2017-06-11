@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+<h1>New Auto Handel</h1>
+
+<%= render 'form', auto_handel: @auto_handel %>
+<% else  %>
+	<h5> <u>Aby wprowadzić nowy samochód musisz być zalogowany</u> </h5>
+<% end %>
+
+<%= link_to 'Back', auto_handels_path %>

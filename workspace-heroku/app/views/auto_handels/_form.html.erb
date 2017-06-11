@@ -1,0 +1,32 @@
+<%= form_for(auto_handel) do |f| %>
+  <% if auto_handel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(auto_handel.errors.count, "error") %> prohibited this auto_handel from being saved:</h2>
+
+      <ul>
+      <% auto_handel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :marka %>
+    <%= f.text_field :marka %>
+  </div>
+
+  <div class="field">
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cena %>
+    <%= f.text_field :cena %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

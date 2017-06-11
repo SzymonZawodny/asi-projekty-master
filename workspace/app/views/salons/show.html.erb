@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @salon.nazwa %>
+</p>
+
+<p>
+  <strong>Rocznik:</strong>
+  <%= @salon.rocznik %>
+</p>
+
+<p>
+  <strong>Przebieg:</strong>
+  <%= @salon.przebieg %>
+</p>
+
+<p>
+  <strong>Cena:</strong>
+  <%= @salon.cena %>
+</p>
+<button class="btn btn-warning" type="button"><%= link_to 'Zmień', edit_salon_path(@salon) %></button> |
+<button class="btn btn-info" type="button"><%= link_to 'Wróć', salons_path %></button>

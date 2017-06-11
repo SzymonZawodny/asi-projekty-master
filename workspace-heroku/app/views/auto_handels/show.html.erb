@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marka:</strong>
+  <%= @auto_handel.marka %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @auto_handel.model %>
+</p>
+
+<p>
+  <strong>Cena:</strong>
+  <%= @auto_handel.cena %>
+</p>
+
+<%= link_to 'Edit', edit_auto_handel_path(@auto_handel) %> |
+<%= link_to 'Back', auto_handels_path %>

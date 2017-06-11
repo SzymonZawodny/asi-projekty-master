@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+<h1>Dodaj nowy samochód do salonu</h1>
+
+<%= render 'form', salon: @salon %>
+<% else  %>
+	<h5> <u>Aby wprowadzić nowy samochód musisz być zalogowany</u> </h5>
+<% end %>
+
+<button class="btn btn-info" type="button"><%= link_to 'Wróc', salons_path %></button>

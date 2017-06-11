@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Salon samochodowy</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Rocznik</th>
+      <th>Przebieg</th>
+      <th>Cena</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @salons.each do |salon| %>
+      <tr>
+        <td><%= salon.nazwa %></td>
+        <td><%= salon.rocznik %></td>
+        <td><%= salon.przebieg %></td>
+        <td><%= salon.cena %></td>
+        <td><button class="btn btn-info" type="button"><%= link_to 'Szczegóły', salon %></button></td>
+        <td><button class="btn btn-warning" type="button"><%= link_to 'Edytuj', edit_salon_path(salon) %></button></td>
+        <% if user_signed_in? %>
+        <td><button class="btn btn-danger" type="button"><%= link_to 'Usuń', salon, method: :delete, data: { confirm: 'Na pewno chcesz usunąć?' } %></button></td>
+        <% else  %>
+	      
+        <% end %>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<center>
+<p align="center"><%= will_paginate @salons %></p>
+</center>
+
+<br>
+
+<button class="btn btn-success" type="button"><%= link_to 'Dodaj nowy samochód', new_salon_path %></button>

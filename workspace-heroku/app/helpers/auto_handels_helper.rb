@@ -1,0 +1,2 @@
+module AutoHandelsHelper
+end
